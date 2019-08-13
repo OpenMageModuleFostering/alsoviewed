@@ -3,7 +3,9 @@
     "type": "magento-module",
     "license": "GPL",
     "homepage": "",
-    "description": "Free magento module, that shows products viewed by customers who viewed this product.",
+    "description": "Magento module that displays products, viewed by visitors, who viewed this
+product. It can also show recommendations based on viewed, compared and shopping
+cart products.",
     "authors": [
     {
         "name": "Vova Yatsyuk",
