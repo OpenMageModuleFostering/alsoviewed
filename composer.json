@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/alsoviewed",
+    "type": "magento-module",
+    "license": "GPL",
+    "homepage": "",
+    "description": "Free magento module, that shows products viewed by customers who viewed this product.",
+    "authors": [
+    {
+        "name": "Vova Yatsyuk",
+        "email": "vova.yatsyuk@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
