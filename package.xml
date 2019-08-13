@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <package>
     <name>alsoviewed</name>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
     <stability>stable</stability>
     <license>GPL</license>
     <channel>community</channel>
     <extends/>
-    <summary>Magento module that displays products, viewed by visitors, who viewed this product. It can also show recommendations based on viewed, compared and shopping cart products.</summary>
+    <summary>Products recommendation module, that shows products viewed by customers who viewed this product.</summary>
     <description>Magento module that displays products, viewed by visitors, who viewed this&#xD;
 product. It can also show recommendations based on viewed, compared and shopping&#xD;
-cart products (see [widget](#widget) section).&#xD;
+cart products.&#xD;
 &#xD;
 #### How it works?&#xD;
 Every time the client is looking at some product, module update relations between&#xD;
@@ -21,43 +21,39 @@ Yes, store administrator can manually change the relation sort order or even&#xD
 disable the relation to hide it from the frontend.&#xD;
 &#xD;
 #### Configuration&#xD;
-You can easely place the suggested products block to the one of the following&#xD;
-places on product page:&#xD;
+Module configuration provides ability to show Also Viewed Products in&#xD;
+one of the following containers:&#xD;
 &#xD;
+- Left or Right column&#xD;
 - Product additional information&#xD;
-- Left column&#xD;
-- Right column&#xD;
 &#xD;
-&gt; Configuration blocks - are the blocks that shows recommendations based on&#xD;
-&gt; currently viewed product only.&#xD;
-&#xD;
-&gt; If you wish to show recommendations based on customer history (viewed, compared),&#xD;
-&gt; use the [widget](#widget) instead.&#xD;
+Each of the sections has options that allows to configure title, list mode,&#xD;
+products count, columns count (in case of grid mode) and image dimensions.&#xD;
 &#xD;
 #### Widget&#xD;
-Since 1.1.0 you can use Alsoviewed Recommendations widget on any page.&#xD;
-Widget provides ability to recommend products by additional activities:&#xD;
+Widget provides ability to recommend products on any page by additional activities:&#xD;
 &#xD;
- - Recently Viewed Products&#xD;
- - Recently Compared Products&#xD;
- - Shopping Cart products&#xD;
+- Recently Viewed Products&#xD;
+- Recently Compared Products&#xD;
+- Shopping Cart products&#xD;
 &#xD;
 #### The main features&#xD;
 - 100% free and open source&#xD;
 - High perfomance&#xD;
 - Simple and clean design&#xD;
 - Responsive css&#xD;
-&#xD;
-&gt; Module functionality relies on cron. Make sure you configure it properly.&#xD;
 </description>
-    <notes>* Better third-party themes compatibility&#xD;
-* Added new perfomance setting: **chunk_size**. (It can be used when &#xD;
-mysql 'max_allowed_packet' size is too small  and you need to decrease &#xD;
-query size, or it can be increased to decrease queries count during cronjob)</notes>
+    <notes>View release notes at https://github.com/vovayatsyuk/magento-alsoviewed/releases/tag/1.3.0&#xD;
+&#xD;
+- Security fix to _isAllowed method (strtolower)&#xD;
+- Removed non-working "Save" button from relations page&#xD;
+- Search crawlers and bots are no longer affects product relations&#xD;
+- Added ability to ignore specific IP addresses&#xD;
+- Added ability to create new and manage existing relations from backend `Product Edit` page</notes>
     <authors><author><name>Vova Yatsyuk</name><user>VovaYatsyuk</user><email>vova.yatsyuk@gmail.com</email></author></authors>
-    <date>2015-04-08</date>
-    <time>18:36:26</time>
-    <contents><target name="magecommunity"><dir name="Yavva"><dir name="Alsoviewed"><dir name="Block"><dir name="Adminhtml"><dir name="Log"><file name="Grid.php" hash="6661435fdb8e525775adf990a90d11c4"/></dir><file name="Log.php" hash="cb3cca5ff29b80044e7943d376dc5993"/><dir name="Relations"><dir name="Edit"><file name="Form.php" hash="0ad20532cb04c4c850fe1398598e6588"/></dir><file name="Edit.php" hash="1afce837cf4bd29beb1cc8f38d4065b6"/><file name="Grid.php" hash="e10da78030dbfb1ecbb32f6df82ddfa1"/></dir><file name="Relations.php" hash="6561a0acaacc1bc8e5046be59da888b6"/></dir><file name="Products.php" hash="68240b69f626dd3c6283d1144d18e214"/><dir name="Widget"><file name="Products.php" hash="4fad1d2e4c32ed756c3b5fc988edd5a2"/></dir></dir><dir name="Helper"><file name="Data.php" hash="d8057e1e4731c53a6b1e72a626ce9ac3"/></dir><dir name="Model"><file name="Basis.php" hash="ff0ba6ceadd3b99d5ac4825ae109a6b0"/><file name="Observer.php" hash="c01e1caf0df63b73e59cb2035a0585a1"/><file name="Relation.php" hash="506d2fa53e2e342030bdfb976a2f0e00"/><dir name="Resource"><dir name="Collection"><file name="Abstract.php" hash="6d996d6b7643f1b3cc3c0db3d5440011"/></dir><dir name="Log"><file name="Collection.php" hash="790509f4a4e74cc007adae600c0d8a1b"/></dir><file name="Log.php" hash="d79d4a97ba3303dfa3e042ec34c2e0e3"/><dir name="Relation"><file name="Collection.php" hash="be05b1351c8703f1157b6f552612ffa8"/></dir><file name="Relation.php" hash="c154166a4318331e47b755749965a045"/></dir><file name="Session.php" hash="9ba3b43dec9458cc13cb6c6e7efbef05"/><dir name="System"><dir name="Config"><dir name="Source"><file name="ListMode.php" hash="d3480dc016dc0ff9e2e23ab210cf9756"/></dir></dir></dir></dir><dir name="controllers"><dir name="Adminhtml"><dir name="Alsoviewed"><file name="LogController.php" hash="2f585270cff1904618f8dea31133b6e0"/><file name="RelationsController.php" hash="de5a35329a09477a79ec65c57a4280ca"/></dir></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="ff26af98f8e1eef8d902eca84da6d3aa"/><file name="config.xml" hash="0ef35056d358da48ba5e62b16a714843"/><file name="system.xml" hash="9dc125f86fef4e939ccbc631f5285ccb"/><file name="widget.xml" hash="7d8c523d78cc46b203f440cc9be9a356"/></dir><dir name="sql"><dir name="yavva_alsoviewed_setup"><file name="install-1.0.0.php" hash="8ed81d46895731990b7c2066bfcc353d"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="base"><dir name="default"><dir name="layout"><dir name="yavva"><file name="alsoviewed.xml" hash="53473beb4db371b273400ae8fa223a32"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><dir name="yavva"><file name="alsoviewed.xml" hash="bbd75b6b9b5639c7a54a77216e3afeb5"/></dir></dir><dir name="template"><dir name="yavva"><dir name="alsoviewed"><file name="products.phtml" hash="d55af4e92a7fbe929c10b81a804ddffe"/><dir name="wrapper"><file name="block.phtml" hash="ec9cb02d52f4ea8756a24438d26def64"/><file name="collateral.phtml" hash="0354a4c8f3466edc2d3bb5fb0a0b75f7"/></dir></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Yavva_Alsoviewed.xml" hash="4eedb69f4c1fc39a1e4170694a19c3f8"/></dir></target><target name="magelocale"><dir><dir name="en_US"><file name="Yavva_Alsoviewed.csv" hash="59c50c66ff06abb0ef30ca182b7517fa"/></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="yavva"><dir name="alsoviewed"><dir name="css"><file name="alsoviewed.css" hash="2eea21636a6bf099f2387c4f992b4c31"/></dir><file name=".DS_Store" hash="47b2bb12e2c4c4275ce2349d6b4570d0"/></dir></dir></dir></dir></dir></target></contents>
+    <date>2015-08-13</date>
+    <time>20:06:45</time>
+    <contents><target name="magecommunity"><dir name="Yavva"><dir name="Alsoviewed"><dir name="Block"><dir name="Adminhtml"><dir name="Catalog"><dir name="Product"><dir name="Edit"><dir name="Tab"><file name="Relations.php" hash="cc7fa402cb6e41f0d445e13a35c28c05"/></dir></dir></dir></dir><dir name="Log"><file name="Grid.php" hash="6661435fdb8e525775adf990a90d11c4"/></dir><file name="Log.php" hash="cb3cca5ff29b80044e7943d376dc5993"/><dir name="Relations"><dir name="Edit"><file name="Form.php" hash="0ad20532cb04c4c850fe1398598e6588"/></dir><file name="Edit.php" hash="1afce837cf4bd29beb1cc8f38d4065b6"/><file name="Grid.php" hash="e10da78030dbfb1ecbb32f6df82ddfa1"/></dir><file name="Relations.php" hash="5a8504dde3a69da03151bd75c0a59120"/></dir><file name="Products.php" hash="68240b69f626dd3c6283d1144d18e214"/><dir name="Widget"><file name="Products.php" hash="4fad1d2e4c32ed756c3b5fc988edd5a2"/></dir></dir><dir name="Helper"><file name="Data.php" hash="4712c5c02e1873ffbb21a18d4b6084bc"/></dir><dir name="Model"><file name="Basis.php" hash="ff0ba6ceadd3b99d5ac4825ae109a6b0"/><file name="Observer.php" hash="d4a7929679224d67fa18c2054c93a847"/><file name="Relation.php" hash="506d2fa53e2e342030bdfb976a2f0e00"/><dir name="Resource"><dir name="Collection"><file name="Abstract.php" hash="6d996d6b7643f1b3cc3c0db3d5440011"/></dir><dir name="Log"><file name="Collection.php" hash="790509f4a4e74cc007adae600c0d8a1b"/></dir><file name="Log.php" hash="d79d4a97ba3303dfa3e042ec34c2e0e3"/><dir name="Relation"><file name="Collection.php" hash="be05b1351c8703f1157b6f552612ffa8"/></dir><file name="Relation.php" hash="f25eeeb7330853418226ca65baa47846"/></dir><file name="Session.php" hash="9ba3b43dec9458cc13cb6c6e7efbef05"/><dir name="System"><dir name="Config"><dir name="Source"><file name="ListMode.php" hash="d3480dc016dc0ff9e2e23ab210cf9756"/></dir></dir></dir></dir><dir name="controllers"><dir name="Adminhtml"><dir name="Alsoviewed"><file name="LogController.php" hash="34ae25cc085adf4875be235feb4d9d63"/><file name="ProductController.php" hash="39c67faecdc13547714a63237487d831"/><file name="RelationsController.php" hash="6ba4c0a8b073c0dbf604932250d0e054"/></dir></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="ff26af98f8e1eef8d902eca84da6d3aa"/><file name="config.xml" hash="848be336a98730fca7503720c4e7725f"/><file name="system.xml" hash="ed3e157796335dbcf9e6cc96f57ada25"/><file name="widget.xml" hash="7d8c523d78cc46b203f440cc9be9a356"/></dir><dir name="sql"><dir name="yavva_alsoviewed_setup"><file name="install-1.0.0.php" hash="8ed81d46895731990b7c2066bfcc353d"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="base"><dir name="default"><dir name="layout"><dir name="yavva"><file name="alsoviewed.xml" hash="cdc76c11b4dd573f4d891042714e92cf"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><dir name="yavva"><file name="alsoviewed.xml" hash="df953c9808d2e6ca186f36bc8ca4aac4"/></dir></dir><dir name="template"><dir name="yavva"><dir name="alsoviewed"><file name="products.phtml" hash="d55af4e92a7fbe929c10b81a804ddffe"/><dir name="wrapper"><file name="block.phtml" hash="ec9cb02d52f4ea8756a24438d26def64"/><file name="collateral.phtml" hash="0354a4c8f3466edc2d3bb5fb0a0b75f7"/></dir></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Yavva_Alsoviewed.xml" hash="4eedb69f4c1fc39a1e4170694a19c3f8"/></dir></target><target name="magelocale"><dir name="en_US"><file name="Yavva_Alsoviewed.csv" hash="abdd5870a9969bf9eb6ee89019b5ebb7"/></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="yavva"><dir name="alsoviewed"><dir name="css"><file name="alsoviewed.css" hash="2eea21636a6bf099f2387c4f992b4c31"/></dir></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+    <dependencies><required><php><min>5.1.0</min><max>7.0.0</max></php></required></dependencies>
 </package>

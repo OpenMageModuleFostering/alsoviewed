@@ -3,7 +3,7 @@
     "type": "magento-module",
     "license": "GPL",
     "homepage": "",
-    "description": "Magento module that displays products, viewed by visitors, who viewed this product. It can also show recommendations based on viewed, compared and shopping cart products.",
+    "description": "Products recommendation module, that shows products viewed by customers who viewed this product.",
     "authors": [
     {
         "name": "Vova Yatsyuk",
